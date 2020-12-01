@@ -1,0 +1,26 @@
+﻿@page
+@model Session_Razor_Pages.Page2Model
+@{
+    ViewData["Title"] = "Page2";
+}
+
+@if(Model.Employee.Username!=null)
+{
+
+    <div class="form-group">
+        <div class="col-sm-10">
+            <h4 style="color:red">We are using Session Objects</h4>
+            <p>Hello: @Model.Employee.Name Welcome to our Home Page</p>
+            <p>Are you temporary?: @Model.Employee.IsTemporary</p>
+            <p>Your age is: @Model.Employee.Age</p>
+        </div>
+        <br />
+        <div>
+            <h4 style="color:red">We are using Cookies </h4>
+            <p>Your name is : @Model.CookieValue</p>
+        </div>
+    </div>
+}
+
+    
+
